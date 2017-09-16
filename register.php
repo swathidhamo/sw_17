@@ -64,12 +64,12 @@
       }
 
 
-        if($response != null&&$response->success){
+    
         $sql = "INSERT INTO user_info (username, password,name,weight,height) VALUES (?, ?,?,?,?)";
         $query = mysqli_prepare($link,$sql);
         mysqli_stmt_bind_param($query,"sssii",$username,$hash,$name,$weight,$height);
         $result = mysqli_stmt_execute($query);
-      }
+      
     
     	if($result ){
     		header("Location: login.php");
