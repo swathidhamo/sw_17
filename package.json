@@ -11,8 +11,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
-  },
+          "start": "node index.js"
+      },
+      "dependencies": { "express": "~4.10.2", "socket.io": "1.2.0", },
   "author": "seedcube",
   "license": "ISC"
 }
