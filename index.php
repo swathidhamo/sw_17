@@ -1,132 +1,122 @@
 <html>
 <head>
-
 	<title>Techie Helpline</title>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  	<script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<?php
-
-     session_start();
-     session_destroy();
-
-    
-     echo "<div class = 'page_header'><div class = 'jumbotron' ><h1>Techie Helpline</h1></div></div>";
-     require_once "recaptchalib.php";
-     require("connect.php");
-
-     if(!$link){
-      echo "Could not connect";
-      echo mysqli_error($link);
-     }
-     else{
-      echo "Sucesssfully connected";
-
-      if(isset($_POST["login"])){
-
-      	if(isset($_POST["username"])){
-
-      	  	$username = mysqli_real_escape_string($link,$_POST["username"]);
-            $username = stripslashes($username);
-            $_SESSION["username"] = $username;
-      	 }
-
-      	if(isset($_POST["password"])){
-
-      		  $password = mysqli_real_escape_string($link,$_POST["password"]);
-            $password = stripslashes($password);
-            
-        	}
-
-
-
-        $secret = "6Le_iScUAAAAADkT6a-7dPnEBjWKhmMls2tOxJql";
- 
-      // empty response
-     /*   $response = null;
- 
-      // check secret key
-         $reCaptcha = new ReCaptcha($secret);
-
-          if ($_POST["g-recaptcha-response"]) {
-          $response = $reCaptcha->verifyResponse(
-          $_SERVER["REMOTE_ADDR"],
-          $_POST["g-recaptcha-response"]
-        );
-      }*/
-
-
-        $password_hash = hash('md5',$password);
-        //$query = "SELECT * FROM user_info WHERE username = '".$username."' AND password = '".$password_hash."'";
-       // $sql = mysqli_query($link,$query);       
-        //$rows = mysqli_num_rows($sql);
-        $hash = hash('md5',"midas");
-        if($hash==$password_hash){//&&$response != null&&$response->success){
-             $_SESSION["username"] = $username;
-            echo "  Sucessfully logged in";
-          //  echo $_SESSION["username"];
-           
-            header("Location: landing.php");
-
-        }
-        else{
-            echo "  Invalid username or password";
-        }
-
-
-      	
-      }
-
-     }
-
-
-
-
-
-
-
-
-	?>
-
-
 </head>
 <style type="text/css">
-   .login{
-     border: 2px solid black;
-     border-radius: 6px 6px 6px 6px;
-     padding: 15px 15px 15px 15px;
-     margin right: 550px;
-     margin-top: 150px;
-     margin-left: 410px;
-     width: 450px;
-     font-size: 20px;
-   }
 
-   body {
-    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-    color: #404040;
-    background: #f7e5e3;
+   
+	body {
+	    background-color: white;
+	}
 
-   }
-   .jumbotron{
-    background-color: #bc2210;
+	#loginbox {
+	    margin-top: 30px;
+	}
 
-   }
-   input{
-   	margin: 20px 20px 20px 20px;
-   }
+	#loginbox > div:first-child {        
+	    padding-bottom: 10px;    
+	}
+
+	.iconmelon {
+	    display: block;
+	    margin: auto;
+	}
+
+	#form > div {
+	    margin-bottom: 25px;
+	}
+
+	#form > div:last-child {
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+
+	.panel {    
+	    background-color: transparent;
+	}
+
+	.panel-body {
+	    padding-top: 30px;
+	    background-color: rgba(2555,255,255,.3);
+	}
+	
+	.panel-default {
+		border-color: #FFF;
+	}
+
+	#particles {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    top: 0;                        
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -2;
+	}
+
+	.iconmelon,
+	.im {
+	  position: relative;
+	  width: 150px;
+	  height: 150px;
+	  display: block;
+	  fill: #525151;
+	}
+
+	.iconmelon:after,
+	.im:after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
    
   </style>
 <body>
-  <div class = "login">
-  <form method = "POST" >
-    <p>Username: <input type = "text" name = "username" placeholder = 'Enter the username'></p>
-    <p>Password: <input type = "password" name = "password" placeholder = "Enter the password"></p>
-    <input type = "submit" name = "login" value = "Login">
-    <div class="g-recaptcha" data-sitekey="6Le_iScUAAAAAD2UsWWJ0fxKT2LtXk-MXNxR6JXS"></div>
-  </form>
-  <a href = "register.php">Click here to register</a>
-</div>
 
+<div class="container">    
+    <div class=""row><br/></div> 
+	<div class=""row><br/></div>    
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+        
+        <div class="row" style="text-align:center;">                
+               <img src="images/th.png" alt="Smiley face" height="100" width="360"> 
+        </div>
+        <div class=""row><br/></div> 
+        <div class="panel panel-default" >
+            <div class="panel-body" >
+
+                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                   
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="user" type="text" class="form-control input-lg" name="user" value="" placeholder="User">                                        
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+                    </div>                                                                  
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <a href="find.php" class="btn btn-primary pull-right">Log in</a>                          
+                        </div>
+                    </div>
+
+                </form>     
+
+            </div>                     
+        </div>  
+    </div>
+</div>
 
 </body>
 </html>
