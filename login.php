@@ -7,50 +7,116 @@
 <style type="text/css">
 
    
-   
+	body {
+	    background-color: white;
+	}
+
+	#loginbox {
+	    margin-top: 30px;
+	}
+
+	#loginbox > div:first-child {        
+	    padding-bottom: 10px;    
+	}
+
+	.iconmelon {
+	    display: block;
+	    margin: auto;
+	}
+
+	#form > div {
+	    margin-bottom: 25px;
+	}
+
+	#form > div:last-child {
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+
+	.panel {    
+	    background-color: transparent;
+	}
+
+	.panel-body {
+	    padding-top: 30px;
+	    background-color: rgba(2555,255,255,.3);
+	}
+	
+	.panel-default {
+		border-color: #FFF;
+	}
+
+	#particles {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    top: 0;                        
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -2;
+	}
+
+	.iconmelon,
+	.im {
+	  position: relative;
+	  width: 150px;
+	  height: 150px;
+	  display: block;
+	  fill: #525151;
+	}
+
+	.iconmelon:after,
+	.im:after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
    
   </style>
 <body>
 
-<div class="wrapper dark-header">
-  <header class="main-header">
-    <div class="logo"><a href="index.html" >JSK</a></div>
-    <div class="navbar navbar-static-top">
-      <div class="btn-grps pull-right">
-        <a class="pink-btn dark-btn" href="#">User Login</a>
-        <a href="#" class="pink-btn">Admin Login</a>
-      </div>
-    </div>
+<div class="container">    
+    <div class=""row><br/></div> 
+	<div class=""row><br/></div>    
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+        
+        <div class="row" style="text-align:center;">                
+               <img src="images/th.png" alt="Smiley face" height="100" width="360"> 
+        </div>
+        <div class=""row><br/></div> 
+        <div class="panel panel-default" >
+            <div class="panel-body" >
 
-  </header>
-  <section class="login-inner">
-    <div class="login-middle">
-      <div class="login-details">
-        <form>
-          <h2>Log In</h2>
-          <label>
-            <input type="text" placeholder="Email address"/>
-          </label>
-          <label>
-            <input type="text" placeholder="Phone Number"/>
-          </label>
-          <label>
-            <input type="password" placeholder="Password"/>
-          </label>
-          <label>
-            <input type="checkbox"/><span>Remember me</span>
-          </label>
-          <div class="btn-sub">
-            <button class="pink-btn">Log In</button>
-            <span>
-              <a href="#">Forget your password?</a>
-            </span>
-          </div>
+                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                   
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="user" type="text" class="form-control input-lg" name="user" value="" placeholder="User">                                        
+                    </div>
 
-        </form>
-      </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+                    </div>                                                                  
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <a href="find.php" class="btn btn-primary pull-right">Log in</a>                          
+                        </div>
+                    </div>
+
+                </form>     
+
+            </div>                     
+        </div>  
     </div>
-  </section>
+</div>
 
 </body>
 </html>
