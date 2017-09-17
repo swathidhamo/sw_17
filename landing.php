@@ -30,22 +30,21 @@
 </nav>
 <div id = "about">
   <div class = 'page_header' style="padding: 10px 0 0 30px;"><h1>
-	Easily find quality Developers
+	Have a startup idea ? Get in touch with the best of developers to make it happen.
 	</h1>
-	<p style="font-size:16px;">On Tech-Helpline you'll find a range of top talent, from programmers to designers, writers, customer support reps, and more.</p>
+	<p style="font-size:16px;">Tech Helpline is a one stop portal for you to find the best of developer's and programmers that your idea needs with a range of customization that is unique to your startup</p>
 </div>
 
   <div class = 'page_header' style="padding: 30px 0 0 30px;"><h1>
-	How it Works?
+	How it Works ?
 	</h1>
 	<br/>
 	<ul style="font-size: 20px;">
-		<li>Understand the customer's need using a simple questionnaire</li>
+		<li>To hire the developer for your application, fill in the questionnaire to answer just 6 simple questions</li>
 		<br/>
-		<li>Suggest the most suitable developer for the project</li>
+		<li>We will then suggest the best developer for this idea</li>
 		<br/>
-		<li>Following that the start-up founder has a 3 day window where we can facilitate
-and organise live chats, video calls between the customer and developer</li>
+		<li>Get in touch with the developer to build your minimilastic prototype and request for another developer within 3 days if you want another persons</li>
 	</ul>
 </div>
 

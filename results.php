@@ -43,6 +43,7 @@
 					<p>GitHub:https://github.com/swathidhamo</p>
 					<p>Specialization: UI/UX and MainFrame</p>
 					<p>Rating for UI/UX: 4.92 <span style="color:green"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></span></p>
+					<p style="text-align:right;"><button type="button" class="btn btn-primary">Connect</button></p>
 				</div>
 			</div>
 		</div>
@@ -58,6 +59,7 @@
 					<p>GitHub:https://github.com/deepanshu</p>
 					<p>Specialization: Testing and Deployment</p>
 					<p>Rating for Testing: 4.87 <span style="color:green"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></span></p>
+					<p style="text-align:right;"><button type="button" class="btn btn-primary">Connect</button></p>
 				</div>
 		</div>
 	</div>
