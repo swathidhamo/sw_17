@@ -8,6 +8,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body> 
+   <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <a class="navbar-brand" href="#">Techie Helpline</a>
+     </div>
+     <ul class="nav navbar-nav">
+       <li><a href="landing.php">Home</a></li>
+       <li><a href = "profile.php">Profiles</a></li>
+       <li><a href="find.php">Find my developer</a></li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href = "logout.php"><?php echo $_SESSION["username"]; ?></a></li>
+       <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+       <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+     </ul>
+   </div>
+ </nav>
  
 <div class="container">
 <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left:0 !important; padding-right:0 !important;">

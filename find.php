@@ -123,7 +123,7 @@
  	<div class="form-group">
 		<div class="col-sm-12 col-md-12 col-lg-2"></div>
  		<div class="col-sm-12 col-md-12 col-lg-2">
-			<label for="company">Duration</label>
+			<label for="company">Duration<br/>(in Days)</label>
 		</div>
 		<div class="col-sm-12 col-md-12 col-lg-4">
     		<input type="text" name="duration", class="form-control", required="true">
@@ -174,7 +174,7 @@
 		<div class="col-sm-12 col-md-12 col-lg-2"></div>
  		<div class="col-sm-12 col-md-12 col-lg-2"></div>
 		<div class="col-sm-12 col-md-12 col-lg-4">
-		    <button type="button" class="btn btn-primary">Submit</button>
+		    <a href="results.php" class="btn btn-primary" style="text-decoration: none;">Submit</a>
 		</div>
 	</div>
 </div>
