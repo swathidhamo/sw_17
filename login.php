@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<title>Techie Helpline</title>
   	<script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
