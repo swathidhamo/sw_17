@@ -107,7 +107,7 @@
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">
-                            <a href="find.php" class="btn btn-primary pull-right">Log in</a>                          
+                            <a href="landing.php" class="btn btn-primary pull-right">Log in</a>                          
                         </div>
                     </div>
 
